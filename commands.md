@@ -18,6 +18,11 @@ python3 routeInstall.py
 
 ### via Serial Port Connection
 
-python3 /home/raveen/aodv_route_table/routeInstall_serial.py send   --port /dev/ttyACM0   --destination 0x14   --path 0x12,0x13,0x14   --install-id 1
+python3 routeInstall_serial.py send   --port /dev/ttyACM0   --destination 0x14   --path 0x12,0x13,0x14   --install-id 1
 
+## SDN - Route Switch
+
+### via serial port connection
+
+python3 routeSwitch_serial.py   --port /dev/ttyACM0   --target-node 0x11   --destination 0x15   --next-hop 0x12   --channel-index 0
 
