@@ -18,5 +18,6 @@ python3 routeInstall.py
 
 ### via Serial Port Connection
 
+python3 /home/raveen/aodv_route_table/routeInstall_serial.py send   --port /dev/ttyACM0   --destination 0x14   --path 0x12,0x13,0x14   --install-id 1
 
 
