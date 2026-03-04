@@ -19,6 +19,7 @@ if command -v protoc &> /dev/null; then
     protoc --python_out="$OUTPUT_DIR" -I. meshtastic/aodv.proto
     protoc --python_out="$OUTPUT_DIR" -I. meshtastic/mesh.proto
     protoc --python_out="$OUTPUT_DIR" -I. meshtastic/portnums.proto
+    protoc --python_out="$OUTPUT_DIR" -I. meshtastic/sdn.proto
     
 elif command -v python3 &> /dev/null && python3 -c "import grpc_tools.protoc" 2>/dev/null; then
     echo "Using grpc_tools.protoc..."
@@ -26,6 +27,7 @@ elif command -v python3 &> /dev/null && python3 -c "import grpc_tools.protoc" 2>
     python3 -m grpc_tools.protoc -I. --python_out="$OUTPUT_DIR" meshtastic/aodv.proto
     python3 -m grpc_tools.protoc -I. --python_out="$OUTPUT_DIR" meshtastic/mesh.proto
     python3 -m grpc_tools.protoc -I. --python_out="$OUTPUT_DIR" meshtastic/portnums.proto
+    python3 -m grpc_tools.protoc -I. --python_out="$OUTPUT_DIR" meshtastic/sdn.proto
 else
     echo "Error: Neither 'protoc' nor 'grpc_tools.protoc' found."
     echo ""
