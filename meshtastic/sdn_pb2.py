@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 import sys
 import os
 
-sys.path.append(os.path.abspath("/home/raveen/firmware_meshtastic_new/nanopb-0.4.9-linux-x86/generator/proto/"))
+sys.path.append(os.path.abspath("nanopb-0.4.9-linux-x86/generator/proto/"))
 import nanopb_pb2 as nanopb__pb2
 
 

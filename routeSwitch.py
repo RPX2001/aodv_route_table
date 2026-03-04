@@ -2,8 +2,11 @@
 # send_sdn_route_tcp.py
 
 from meshtastic.tcp_interface import TCPInterface
-from generated import sdn_pb2, portnums_pb2
+import sys
+import os
+sys.path.append(os.path.abspath("meshtastic"))
 
+import sdn_pb2, portnums_pb2
 def main():
     # Connect to meshtasticd TCP (same as your RERR script)
     iface = TCPInterface(hostname="127.0.0.1", portNumber=4403)
